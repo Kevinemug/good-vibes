@@ -1,0 +1,17 @@
+/* eslint-disable no-unused-vars */
+import React from 'react';
+import './home.css'
+import tvswall from '../.././assets/images/tvswall.jpg'
+import Navigation from '../../components/Navigation/navigation';
+import VideoBackground from './video';
+const Home = () => {
+    return ( <>
+    
+
+
+
+
+    </> );
+}
+ 
+export default Home;

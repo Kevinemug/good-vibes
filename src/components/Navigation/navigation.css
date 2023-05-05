@@ -1,0 +1,308 @@
+.nav-background{
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.nav-container{
+    background: linear-gradient(to right, #BA90C6, #e7bce6);
+    width: 100%;
+    height: 90px;
+    padding-bottom: 10px;
+    position: absolute;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    z-index: 2;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.icon{
+    font-size: 30px;
+    font-weight: 20;
+    cursor: pointer;
+}
+.nav-link-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+.active{
+    opacity: 1;
+    transform: translateY(-50px);
+}
+ .icon-name{
+    font-size: 10px;
+    opacity: 0;
+}
+ .active{
+    flex-direction: column;
+    width:65px;
+    height: 70px;
+    display: flex;
+    position: absolute;
+    top: 26%;
+    background: #C4DCEC;
+
+    display: flex;
+    border: 7px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.name-active{
+    margin-top: 50px;
+    opacity: 1;
+    color: #C0DBEA;
+
+}
+
+.active::before{
+content: " ";
+width: 20px;
+height: 20px;
+position: absolute;
+top: 32%;
+border-top-right-radius: 20px;
+left: -20px;
+box-shadow: 0px -13px 0 0 black;
+
+
+}
+.active::after{
+content: " ";
+width: 20px;
+height: 20px;
+position: absolute;
+top: 32%;
+border-top-left-radius: 20px;
+left: 65px;
+box-shadow: 0px -13px 0 0 black;}
+
+
+
+  
+.background-image{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    filter: brightness(40%);
+
+}
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+     .nav-background{
+        background-position: center;
+        }
+        .nav-container{
+            background: white;
+            width: 800px;
+            height: auto;
+            padding: 25px;
+            padding-bottom: 10px;
+            position: absolute;
+            position: fixed;
+            margin-top: 50px;
+            z-index: 2;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .icon{
+            font-size: 40px;
+            font-weight: 20;
+            cursor: pointer;
+        }
+        
+.nav-link-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+ .nav-link-container:hover{
+    transform: translateY(5px);
+    transition: 0.5s;
+
+
+} 
+ .active{
+    opacity: 1;
+    transform: translateY(-50px);
+}
+ .icon-name{
+    font-size: 14px;
+    opacity: 1;
+    display: block;
+}
+ .active{
+    flex-direction: column;
+    width:90px;
+    height: 90px;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    border: 5px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: green;
+    transition: 0.5s;
+}
+.name-active{
+    margin-top: 20px;
+}
+
+.active::before{
+content: " ";
+width: 20px;
+height: 20px;
+position: absolute;
+top: 40%;
+border-top-right-radius: 20px;
+left: -20px;
+box-shadow: 0px -13px 0 0 black;
+
+
+}
+.active::after{
+content: " ";
+width: 20px;
+height: 20px;
+position: absolute;
+top: 40%;
+border-top-left-radius: 20px;
+left: 90px;
+box-shadow: 0px -12px 0 0 black;
+
+
+}
+   
+}
+@media only screen and (min-width: 1200px) {
+    .nav-background{
+        background-position: center;
+        height: 400px;
+        }
+        .background-image{
+            height: 400px;
+  
+        }
+        .nav-container{
+            background: linear-gradient(to right, #BA90C6, #e7bce6);
+            transition:  1s ease;       
+                 width: 80%;
+            height: auto;
+            padding: 20px;
+            padding-bottom: 10px;
+            position: absolute;
+            position: fixed;
+            left: 100px;
+            z-index: 2;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            box-shadow: 0px 0px 15px 0px black;
+            justify-content: space-around;
+
+        } 
+        .icon{
+            font-size: 40px;
+            font-weight: 20;
+            cursor: pointer;
+        }
+        
+.nav-link-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+ .active{
+    opacity: 1;
+    transform: translateY(-50px);
+}
+ .icon-name{
+    font-size: 14px;
+    opacity: 0;
+}
+ .active{
+    flex-direction: column;
+    width:90px;
+    height: 90px;
+    display: flex;
+    position: absolute;
+    top: 10%;
+    font-weight:400;
+    text-shadow: 3px 3px 3px 3px rgb(41, 40, 40);
+    display: flex;
+    border: 7px solid black;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #C4DCEC;
+    transition: 0.5s;
+}
+.name-active{
+    margin-top: 40px;
+    opacity: 1;
+    color: #C0DBEA;
+}
+
+.active::before{
+content: " ";
+width: 20px;
+height: 20px;
+position: absolute;
+top: 40%;
+border-top-right-radius: 20px;
+left: -20px;
+box-shadow: 0px -13px 0 0 black;
+
+
+}
+.active::after{
+content: " ";
+width: 20px;
+height: 20px;
+position: absolute;
+top: 40%;
+border-top-left-radius: 20px;
+left: 90px;
+box-shadow: 0px -12px 0 0 black;
+ }
+
+
+}

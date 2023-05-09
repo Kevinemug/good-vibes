@@ -5,19 +5,13 @@ import TestYourBrain from "./screens/Test/test";
 import tvswall from './assets/images/tvswall.jpg'
 import Navigation from "./components/Navigation/navigation";
 import VideoBackground from "./screens/Home/video";
+import './App.css'
 function App() {
 
   return (
     <>
     <BrowserRouter>
-    <Navigation image={tvswall}/> 
-    <div>
-      <VideoBackground />
-      <div className="content">
-        <h1>Welcome to my app</h1>
-        <p>This is some content</p>
-      </div>
-    </div>
+    <Navigation /> 
 
 <Routes>
   <Route exact path='/' Component={Home}/>

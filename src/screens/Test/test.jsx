@@ -9,13 +9,39 @@ import Example from '../../anime';
 const TestYourBrain = () => {
   
     return (
-<>
 
-<div className=' flex justify-center '  style={{marginTop:"200px"}}>
-    {/* <Riddle/> */}
-    <Example/>
+<>
+<div className="grid grid-cols-3 h-fit shadow-md  mt-[250px] mx-20 gap-3 " >
+
+<div className="bg-green-100 w-600 col-span-3" >header</div>
+<div className="bg-green-500 w-600 border border-green-700 row-span-5">sidebar</div>
+<div className="bg-green-500 w-600 col-span-2 ">content</div>
+<div className="bg-green-500 w-200">footer</div>
+<div className="bg-green-500 w-200">footer</div>
+<div className="bg-green-500 w-200">footer</div>
+<div className="bg-green-500 w-200">footer</div>
+<div className="bg-green-500 w-200">footer</div>
+
+<div className="bg-green-500 w-200">footer</div>
+
+
+
+
+
+
 </div>
-    </>
+
+
+
+
+
+</>
+
+
+
+
+
+
     );}
  
 export default TestYourBrain;

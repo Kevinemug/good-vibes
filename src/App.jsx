@@ -6,6 +6,7 @@ import tvswall from './assets/images/tvswall.jpg'
 import Navigation from "./components/Navigation/navigation";
 import VideoBackground from "./screens/Home/video";
 import './App.css'
+import Recipe from "./screens/Recipes/recipe";
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
 <Routes>
   <Route exact path='/' Component={Home}/>
   <Route exact path='/test' Component={TestYourBrain}/>
+  <Route exact path='/recipe' Component={Recipe}/>
   </Routes>   
    </BrowserRouter>
     </>

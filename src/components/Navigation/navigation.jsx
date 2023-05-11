@@ -17,25 +17,21 @@ const Navigation = ({image}) => {
     }
     return ( <>
     <div className="nav-background" >
-        <img src={image} alt="" className='background-image' />
+        
 
 <div className="nav-container " >
 <Link to="/" className="nav-link-container " >
-    <a href="">
-        <div className={`icon-container ${click === 'home'? 'active ' : ''}` } onClick={ () =>handleClick('home')}>
-            <AiOutlineHome className='icon '/>
-        </div>
-    </a>
+    <div className={`icon-container ${click === 'home'? 'active ' : ''}` } onClick={ () =>handleClick('home')}>
+        <AiOutlineHome className='icon '/>
+    </div>
  <div className={`icon-name  ${click === 'home' ? "name-active " : ""} `} >Home</div>
    
 
 </Link>
 <Link to="/test" className="nav-link-container ">
-    <a href="">
-        <div className={`icon-container ${click === 'test' ? 'active ' : ''}` } onClick={ () =>handleClick('test')}>
-            <GiArtificialIntelligence className='icon'/>
-        </div>
-    </a>
+    <div className={`icon-container ${click === 'test' ? 'active ' : ''}` } onClick={ () =>handleClick('test')}>
+        <GiArtificialIntelligence className='icon'/>
+    </div>
     <div className={`icon-name  ${click === 'test' ? "name-active " : ""} `}>Test your brain</div>
 </Link>
 <Link to="/" className="nav-link-container ">
@@ -44,7 +40,7 @@ const Navigation = ({image}) => {
     </div>
     <div className={`icon-name  ${click === 'inspo' ? "name-active " : ""} `}>Inspiration</div>
 </Link>
-<Link to="/" className="nav-link-container">
+<Link to="/recipe" className="nav-link-container">
     <div className={`icon-container ${click === 'nutri' ? 'active ' : ''}` } onClick={ () =>handleClick('nutri')}>
         <MdOutlineDinnerDining className='icon'/>
     </div>

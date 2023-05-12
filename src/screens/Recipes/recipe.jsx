@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Hero from '../../components/hero/hero';
 import {BsFillSearchHeartFill} from 'react-icons/bs'
 import  imagehero from '../../assets/images/imagehero.jpg'
 
@@ -29,13 +28,16 @@ const Recipe = () => {
     function handleSearch() {
         const YOUR_APP_ID = "241d10f8";
         const YOUR_APP_KEY = "09e7aa7cc223159a01aa72b403f51c6c";
-    
+         setTitle('searching..')
         fetch(`https://api.edamam.com/search?q=${query}&app_id=241d10f8&app_key=09e7aa7cc223159a01aa72b403f51c6c&from=0&to=20`)
+
           .then(response => response.json())
           .then(data => {
             const recipes = data.hits.map(hit => hit.recipe);
             setRecipe(recipes);
             setResults(true)
+            setSkeletons(false)
+            setTitle(`showing results for ${query}`)
           })
           .catch(error => console.log(error));
       }
@@ -80,7 +82,7 @@ setSkeletons(true)
     
 <div className='mt-[30px] lg:mt-[-60px] md:mt-[100px] ml-20'>
 
-    <div className='  md:text-[26px] lg:text-[18px] mb-20 text-[12px] text-gray-400'>Top recepies</div>
+    <div className='  md:text-[26px] lg:text-[18px] mb-20 text-[12px] text-gray-400'>{title}</div>
 {!results  ? (
   skeletons ? (     <div className='grid grid-cols-2 md:grid-cols-4 gap-y-[20px] gap-x-[10px]  justify-center'>
 
@@ -145,13 +147,13 @@ setSkeletons(true)
 
 
 
-    </div>) :  ( recipe.map(recipe => (
+    </div>) :  ( recipe.length === 0 ? <div>couldnt find what you are looking for</div>  :     recipe.map(recipe => (
         <div  className='w-[150px] transition lg:w-[200px] rounded-lg shadow  md:w-[220px]' key={recipe.uri}>
-      <h3>{recipe.label}</h3>
-      <img src={recipe.image} alt={recipe.label} />
-      <p>{recipe.calories}</p>
+      {/* <h3>{recipe.calories}</h3> */}
+      <img src={recipe.image} alt={recipe.label}className='rounded-lg  lg:h-[150px] lg:w-[250px]'/>
+      <p className='flex justify-center lg:mt-[10px] px-20  text-justify text-[13px] text-gray-500'>{recipe.label}</p>
 </div>) 
-
+ 
  
   ))}
 </div>
@@ -163,7 +165,6 @@ setSkeletons(true)
     
     
 </div>
-    
     
     
     </> );

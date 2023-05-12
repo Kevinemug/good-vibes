@@ -49,7 +49,7 @@ function RecipeList() {
     <div>
           <Parallax
       blur={5}
-      bgImage={('https://images.freeimages.com/images/large-previews/bc7/gallery-1-1220733.jpg')}
+      // bgImage={('https://images.freeimages.com/images/large-previews/bc7/gallery-1-1220733.jpg')}
       bgImageAlt="Parallax Image"
       strength={5000}
     >

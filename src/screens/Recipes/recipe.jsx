@@ -6,9 +6,8 @@ import { BsFillSearchHeartFill } from "react-icons/bs";
 import imagehero from "../../assets/images/imagehero.jpg";
 import More from "../../common/more";
 import { FaRegShareSquare } from "react-icons/fa";
-import { ImCancelCircle } from "react-icons/im";
+import { TiArrowBack} from "react-icons/ti";
 import { useNavigate } from "react-router-dom";
-import RecipeList from "../../recipe";
 
 const Recipe = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -67,8 +66,8 @@ const Recipe = () => {
   const renderRecipeDetails = (recipe,index) => {
     return (
       <div className=" mt-200 absolute top-[0px] transition">
-        <div className=" flex justify-center" onClick={handlCancel }>
-          <ImCancelCircle className="text-xl"   />
+        <div className=" flex justify-center font-black" onClick={handlCancel }>
+          <TiArrowBack className="text-xl"   />back
         </div>
         <div className="grid">
           <div className="text-2xl flex justify-center py-[30px] font-black">

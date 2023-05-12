@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {BsFillSearchHeartFill} from 'react-icons/bs'
 import  imagehero from '../../assets/images/imagehero.jpg'
+import More from '../../common/more';
 
 const Recipe = () => {
 
@@ -165,7 +166,7 @@ setSkeletons(true)
     
     
 </div>
-    
+    <More/>
     
     </> );
 }

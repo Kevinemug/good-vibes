@@ -7,7 +7,7 @@ import VideoBackground from './video';
 const Home = () => {
     return ( <>
     
-
+    <div>under construction</div>
 
 
 

@@ -25,7 +25,7 @@ const Recipe = () => {
   useEffect(() => {
     axios
       .get(
-        "https://api.edamam.com/search?q=salad&app_id=241d10f8&app_key=09e7aa7cc223159a01aa72b403f51c6c&from=0&to=6",
+        "https://api.edamam.com/search?q=pizza&app_id=241d10f8&app_key=09e7aa7cc223159a01aa72b403f51c6c&from=0&to=10",
         { params: { limit: 5 } }
       )
       .then((response) => setRecipes(response.data.hits))
@@ -109,10 +109,14 @@ const Recipe = () => {
             Preparation
           </div>
           <div className="flex gap-x-40 py-40 px-[30px]">
-            <div className="h-[42px] w-[124px] shadow  rounded-lg bg-[#F4F4F4] flex justify-center items-center">
-              instructions
-            </div>
-            <div className="underline mt-[10px] ">on bbc</div>
+            <a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer">
+                <div className="h-[42px] w-[124px] shadow  rounded-lg bg-[#F4F4F4] flex justify-center items-center">
+                  instructions
+                </div>
+            </a>
+            <a  href={recipe.recipe.url} target="_blank" rel="noopener noreferrer">
+                <div className="underline mt-[10px] ">click here</div>
+            </a>
           </div>
         </div>
 
@@ -302,6 +306,8 @@ const Recipe = () => {
                     <div
                       className="w-[150px] transition lg:w-[200px] rounded-lg shadow  md:w-[220px]"
                       key={recipe.uri}
+                      onClick={ () => handleMore(recipe)}
+
                     >
                       {/* <h3>{recipe.calories}</h3> */}
                       <img

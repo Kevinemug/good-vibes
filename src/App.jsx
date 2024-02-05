@@ -16,10 +16,10 @@ function App() {
     <Navigation /> 
 
 <Routes>
-  <Route exact path='/' Component={Home}/>
-  <Route exact path='/test' Component={TestYourBrain}/>
+  <Route exact path='/' Component={Recipe}}/>
+  <Route exact path='/test' Component={Recipe}}/>
   <Route exact path='/recipe' Component={Recipe}/>
-  <Route exact path='/more' Component={More}/>
+  <Route exact path='/more' Component={Recipe}}/>
   </Routes>   
    </BrowserRouter>
     </>

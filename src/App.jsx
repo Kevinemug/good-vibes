@@ -17,9 +17,9 @@ function App() {
 
 <Routes>
   <Route exact path='/' Component={Recipe}}/>
-  <Route exact path='/test' Component={Recipe}}/>
-  <Route exact path='/recipe' Component={Recipe}/>
-  <Route exact path='/more' Component={Recipe}}/>
+  <Route exact path='/test' Component={Home}}/>
+  <Route exact path='/recipe' Component={More}/>
+  <Route exact path='/more' Component={TestYourBrain}}/>
   </Routes>   
    </BrowserRouter>
     </>

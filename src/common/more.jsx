@@ -16,7 +16,7 @@ const More = () => {
                 </div>
                 <div className='h-[42px] w-[124px] shadow  rounded-lg bg-[#F4F4F4] flex justify-center items-center gap-x-20 mt-40' >
                     <div><FaRegShareSquare className='text-xl'/></div>
-                    <p className='text-xl'>Share</p>
+                    <p className='text-xl'>Share recipe</p>
                 </div>
             </div>
         </div>
